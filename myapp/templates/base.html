@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/bootstrap.css'%}">
+</head>
+<body>
+   
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><b>ToDos</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{%url 'todo-add'%}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{%url 'todo-list'%}">TodoList</a>
+              </li>
+              <li class="nav-item">
+        
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+              </li>
+            </ul>
+            <form class="d-flex ">
+               {{request.user}}
+               <a href="{%url 'signout' %}" class="btn btn-outline-success">Logout</a>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      {%block main_block%}
+
+
+      {%endblock%}
+
+
+</body>
+</html>

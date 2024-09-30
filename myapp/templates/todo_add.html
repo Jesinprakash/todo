@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 p-5">
+            <form action="" method="post" class="border border-light border-2 p-4  rounded">
+
+                <h2 class="text-center fw-bold my-3">Todos Add</h2>
+
+                {%csrf_token%}
+
+                <div>
+                    <label for="">Activity</label>
+                    {{form.title}}
+                </div>
+
+                 <br>
+
+            <button type="submit" class="btn btn-outline-success">Add</button>
+            
+
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+  
+</div>
+
+
+{%endblock%}
