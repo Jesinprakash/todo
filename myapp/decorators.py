@@ -16,5 +16,5 @@ def signin_required(fn):
         else:
 
             return fn(request,*args,**kwargs)
-    
+
     return wrapper

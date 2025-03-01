@@ -53,10 +53,6 @@ class TodoListView(View):
         return render(request,"todo_list.html",{"qs":qs})
         
 
-
-
-        
-
 class SignUpView(View):
 
     def get(self,request,*args,**kwargs):
